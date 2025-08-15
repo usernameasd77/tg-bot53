@@ -67,7 +67,7 @@ def answer(message):
         elif text == "Как тебя зовут" :
             bot.send_message(message.chat.id,"Меня зовут бот")
         elif text =="Игровой автомат":
-            value = bot.send_dice(message.chat.id, emoji="🎰").dice.value
+            value = bot.send_dice(message.chat.id, emoji="").dice.value
             if value in (1, 16, 22, 32, 43, 48):
                 bot.send_message(message.chat.id, "Победа")
             elif value == 64:
