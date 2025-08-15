@@ -53,8 +53,8 @@ def send_image(send_message) :
        file = open("image")
        bot.send_photo(message.chat.id, file,caption="Изображение кота:")
        file.close()
-except Exception as e :
-bot.send_message(message.chat.id, f"Ошибка: {e}")
+    except Exception as e :
+        bot.send_message(message.chat.id, f"Ошибка: {e}")
 
 
 @bot.message_handler(content_types=["text"])
